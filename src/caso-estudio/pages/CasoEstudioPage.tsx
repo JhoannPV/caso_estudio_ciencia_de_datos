@@ -19,8 +19,18 @@ export const CasoEstudioPage = () => {
             Calidad del Aire
           </h2>
           <p className="text-sm text-gray-600 mt-1">
-            Agrupamiento de niveles de contaminación (KMeans) — Caso de estudio
-            CRISP-DM.
+            Agrupamiento de niveles de contaminación (KMeans) — CRISP-DM.
+          </p>
+        </Link>
+        <Link
+          to="/clasificacion"
+          className="block p-6 bg-white rounded-xl shadow-sm border border-gray-200 hover:border-blue-300 hover:shadow-md transition-all"
+        >
+          <h2 className="text-lg font-semibold text-gray-800">
+            Éxito Estudiantil
+          </h2>
+          <p className="text-sm text-gray-600 mt-1">
+            Predicción de aprobación/reprobación (Gradient Boosting) — CRISP-DM.
           </p>
         </Link>
       </div>
