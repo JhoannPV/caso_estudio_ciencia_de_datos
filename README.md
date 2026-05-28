@@ -1,7 +1,8 @@
-# Frontend - Clasificador de Calidad del Aire
+# Frontend - Casos de Estudio
 
-Aplicación React + Vite + TypeScript + Tailwind que consume la API de
-agrupamiento y muestra el nivel de contaminación para valores ingresados.
+Aplicación React + Vite + TypeScript + Tailwind que consume la API de casos de
+estudio. Actualmente incluye dos módulos: **Agrupamiento** (calidad del aire) y
+**Clasificación** (rendimiento estudiantil).
 
 ## Requisitos
 
@@ -36,17 +37,30 @@ esté corriendo en `http://localhost:3000`.
 npm run build
 ```
 
+## Rutas
+
+| Ruta | Módulo | Descripción |
+|---|---|---|
+| `/` | Inicio | Landing page con acceso a los casos |
+| `/agrupamiento` | Agrupamiento | Clasificar contaminación ambiental (Bajo/Alto) |
+| `/clasificacion` | Clasificación | Predecir éxito estudiantil (Aprueba/Reprueba) |
+
 ## Estructura
 
 ```
 src/
 ├── agrupamiento/
-│   ├── pages/AgrupamientoPage.tsx        # Página principal
-│   ├── components/AgrupamientoForm.tsx   # Formulario de entrada
-│   ├── components/AgrupamientoResultCard.tsx  # Resultado visual
-│   └── services/agrupamientoService.ts   # Cliente API tipado
-├── api/casoEstudioApi.ts                 # Singleton axios
-├── components/Navbar.tsx                 # Barra de navegación
-├── router/AppRouter.tsx                  # Rutas
-└── helpers/getEnvariables.ts             # Variables de entorno
+│   ├── pages/AgrupamientoPage.tsx
+│   ├── components/AgrupamientoForm.tsx
+│   ├── components/AgrupamientoResultCard.tsx
+│   └── services/agrupamientoService.ts
+├── clasificacion/
+│   ├── pages/ClasificacionPage.tsx
+│   ├── components/ClasificacionForm.tsx
+│   ├── components/ClasificacionResultCard.tsx
+│   └── services/clasificacionService.ts
+├── api/casoEstudioApi.ts           # Singleton axios
+├── components/Navbar.tsx           # Navegación entre módulos
+├── router/AppRouter.tsx            # React Router
+└── helpers/getEnvariables.ts       # Variables de entorno
 ```
