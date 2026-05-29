@@ -24,6 +24,7 @@ export const AgrupamientoForm = ({ onPredecir, cargando }: Props) => {
 
   const enviar = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!todosLlenos) return;
     const data: AgrupamientoInput = {
       "PT08.S1(CO)": parseFloat(valores["PT08.S1(CO)"] || "0"),
       "PT08.S2(NMHC)": parseFloat(valores["PT08.S2(NMHC)"] || "0"),
@@ -33,7 +34,7 @@ export const AgrupamientoForm = ({ onPredecir, cargando }: Props) => {
     onPredecir(data);
   };
 
-  const todosLlenos = CAMPOS.every((c) => valores[c.id]?.trim() !== "");
+  const todosLlenos = CAMPOS.every((c) => (valores[c.id] ?? "").trim() !== "");
 
   return (
     <form onSubmit={enviar} className="bg-white rounded-xl shadow-sm border border-gray-200 p-6 space-y-4">

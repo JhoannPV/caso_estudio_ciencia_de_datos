@@ -1,8 +1,8 @@
 # Frontend - Casos de Estudio
 
 Aplicación React + Vite + TypeScript + Tailwind que consume la API de casos de
-estudio. Actualmente incluye dos módulos: **Agrupamiento** (calidad del aire) y
-**Clasificación** (rendimiento estudiantil).
+estudio. Incluye tres módulos: **Agrupamiento** (calidad del aire),
+**Clasificación** (rendimiento estudiantil) y **Regresión** (precio de viviendas).
 
 ## Requisitos
 
@@ -44,6 +44,7 @@ npm run build
 | `/` | Inicio | Landing page con acceso a los casos |
 | `/agrupamiento` | Agrupamiento | Clasificar contaminación ambiental (Bajo/Alto) |
 | `/clasificacion` | Clasificación | Predecir éxito estudiantil (Aprueba/Reprueba) |
+| `/regresion` | Regresión | Estimar precio de vivienda en California (USD) |
 
 ## Estructura
 
@@ -59,6 +60,11 @@ src/
 │   ├── components/ClasificacionForm.tsx
 │   ├── components/ClasificacionResultCard.tsx
 │   └── services/clasificacionService.ts
+├── regresion/
+│   ├── pages/RegresionPage.tsx
+│   ├── components/RegresionForm.tsx
+│   ├── components/RegresionResultCard.tsx
+│   └── services/regresionService.ts
 ├── api/casoEstudioApi.ts           # Singleton axios
 ├── components/Navbar.tsx           # Navegación entre módulos
 ├── router/AppRouter.tsx            # React Router

@@ -98,6 +98,7 @@ export const ClasificacionForm = ({ onPredecir, cargando }: Props) => {
 
   const enviar = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!todosLlenos) return;
     const data: Record<string, unknown> = {};
     for (const sec of SECCIONES) {
       for (const campo of sec.campos) {
@@ -110,7 +111,7 @@ export const ClasificacionForm = ({ onPredecir, cargando }: Props) => {
   };
 
   const todosLlenos = SECCIONES.flatMap((s) => s.campos).every(
-    (c) => valores[c.id]?.trim() !== ""
+    (c) => (valores[c.id] ?? "").trim() !== ""
   );
 
   return (

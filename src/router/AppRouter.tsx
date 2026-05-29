@@ -2,6 +2,7 @@ import { Route, Routes } from "react-router";
 import { CasoEstudioPage } from "../caso-estudio";
 import { AgrupamientoPage } from "../agrupamiento/pages/AgrupamientoPage";
 import { ClasificacionPage } from "../clasificacion/pages/ClasificacionPage";
+import { RegresionPage } from "../regresion/pages/RegresionPage";
 import { Navbar } from "../components/Navbar";
 
 export const AppRouter = () => {
@@ -13,6 +14,7 @@ export const AppRouter = () => {
                     <Route path="/" element={<CasoEstudioPage />} />
                     <Route path="/agrupamiento" element={<AgrupamientoPage />} />
                     <Route path="/clasificacion" element={<ClasificacionPage />} />
+                    <Route path="/regresion" element={<RegresionPage />} />
                 </Routes>
             </main>
         </>

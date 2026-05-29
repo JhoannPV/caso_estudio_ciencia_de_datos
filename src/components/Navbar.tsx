@@ -4,6 +4,7 @@ const enlaces = [
   { path: "/", label: "Inicio" },
   { path: "/agrupamiento", label: "Calidad del Aire" },
   { path: "/clasificacion", label: "Éxito Estudiantil" },
+  { path: "/regresion", label: "Precio Vivienda" },
 ];
 
 export const Navbar = () => {
